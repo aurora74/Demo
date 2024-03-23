@@ -1,5 +1,6 @@
-import { RegisterFormData } from "./pages/Register";
-import { SignInFormData } from "./pages/SignIn";
+import { RegisterFormData } from "./pages/SignUp";
+import { SignInFormData } from "./pages/LoginPage";
+
 
 const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
 

@@ -7,7 +7,8 @@ import {
 
 import Layout from "./layouts/Layout";
 import Register from "./pages/Register";
-import SignIn from "./pages/SignIn";
+import LoginPage from "./pages/LoginPage";
+import SignupPage from "./pages/SignUp";
 
 const App = () => {
   return (
@@ -33,7 +34,7 @@ const App = () => {
           path="/register"
           element={
             <Layout>
-              <Register />
+              <SignupPage />
             </Layout>
           }
         />
@@ -42,7 +43,7 @@ const App = () => {
           path="/sign-in"
           element={
             <Layout>
-              <SignIn />
+              <LoginPage />
             </Layout>
           }
         />
