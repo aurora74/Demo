@@ -6,11 +6,7 @@ export type CloseSVGProps = React.SVGProps<SVGSVGElement> &
     className: string;
   }>;
 
-export const CloseSVG: React.FC<CloseSVGProps> = ({
-  fillColor = "#000000",
-  className = "",
-  ...props
-}) => {
+export const CloseSVG: React.FC<CloseSVGProps> = ({ fillColor = "#000000", className = "", ...props }) => {
   return (
     <svg
       fill={fillColor}

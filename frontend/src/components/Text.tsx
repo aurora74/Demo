@@ -1,8 +1,9 @@
 import React from "react";
 
 const sizes = {
-  xs: "text-sm font-medium",
-  s: "text-base font-normal",
+  xs: "text-xs font-medium",
+  s: "text-sm font-medium",
+  md: "text-base font-normal",
 };
 
 export type TextProps = Partial<{
@@ -10,25 +11,19 @@ export type TextProps = Partial<{
   as: any;
   size: keyof typeof sizes;
 }> &
-  React.DetailedHTMLProps<
-    React.HTMLAttributes<HTMLSpanElement>,
-    HTMLSpanElement
-  >;
+  React.DetailedHTMLProps<React.HTMLAttributes<HTMLSpanElement>, HTMLSpanElement>;
 
 const Text: React.FC<React.PropsWithChildren<TextProps>> = ({
   children,
   className = "",
   as,
-  size = "xs",
+  size = "s",
   ...restProps
 }) => {
   const Component = as || "p";
 
   return (
-    <Component
-      className={`text-gray-900 font-montserrat ${className} ${sizes[size]}`}
-      {...restProps}
-    >
+    <Component className={`text-gray-900 font-montserrat ${className} ${sizes[size]}`} {...restProps}>
       {children}
     </Component>
   );

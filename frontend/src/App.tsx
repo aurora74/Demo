@@ -6,9 +6,9 @@ import {
 } from "react-router-dom";
 
 import Layout from "./layouts/Layout";
-import Register from "./pages/Register";
-import LoginPage from "./pages/LoginPage";
-import SignupPage from "./pages/SignUp";
+import LoginPage from "./pages/Login";
+import SignupPage from "./pages/Register";
+import LandingPagePage from "./pages/Landing";
 
 const App = () => {
   return (
@@ -18,7 +18,9 @@ const App = () => {
           path="/"
           element={
             <Layout>
-              <p>Home Page</p>
+              <p>
+                <LandingPagePage />
+              </p>
             </Layout>
           }
         />
@@ -40,7 +42,7 @@ const App = () => {
         />
 
         <Route
-          path="/sign-in"
+          path="/login"
           element={
             <Layout>
               <LoginPage />
